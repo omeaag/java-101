@@ -1,12 +1,16 @@
 package D_OOP_Inheritance.Inheritance;
 
 public class Dog extends Animal {
+    static {
+        System.out.println("static block");
+    }
 
     private String earShape;
     private String tailShape;
 
     public Dog() {
-        super("kangal","orta",95);
+//        super("kangal","orta",95);
+        System.out.println("Dog constructor");
     }
 
     public Dog(String type,double weight){
@@ -60,8 +64,12 @@ public class Dog extends Animal {
 
 }
 
-class Student{
+class Student extends Dog{
     private String name;
+
+    public Student() {
+        System.out.println("Student constructor");
+    }
 
     public Student(String name) {
         this.name = name;

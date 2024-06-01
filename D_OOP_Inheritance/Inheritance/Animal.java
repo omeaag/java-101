@@ -6,7 +6,7 @@ public class Animal {
     private double weight;
 
     public Animal() {
-
+        System.out.println("Animal Constructor");
     }
 
     public Animal(String type, String size, double weight) {
