@@ -1,0 +1,39 @@
+package d_oop_inheritance.inheritance_challenge;
+
+public class Worker {
+    private String name;
+    private String birthDate; //mm.dd.yyyy
+    protected String endDate;
+
+    public Worker(){
+
+    }
+
+    public Worker(String name, String birthDate) {
+        this.name = name;
+        this.birthDate = birthDate;
+    }
+
+    public int getAge(){
+        int currentYear = 2024;
+        int birthDateInt = Integer.parseInt(birthDate.substring(6));
+        return currentYear - birthDateInt;
+    }
+    public double collectPay(){
+        return 0.0;
+    }
+
+    public void terminate(String endDate){
+        this.endDate = endDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "name='" + name + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                '}';
+    }
+}
+
